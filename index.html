@@ -112,9 +112,9 @@ header{
 }
 header.solid{background:var(--lousa);border-bottom-color:rgba(243,238,228,.14)}
 .bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;height:4.5rem}
-.brand{font-family:var(--display);font-size:1.25rem;letter-spacing:-.02em;white-space:nowrap}
+.brand{font-family:var(--display);font-size:1.25rem;letter-spacing:-.02em;white-space:nowrap;padding:.6rem 0}
 nav.desk{display:none;align-items:center;gap:2.25rem;font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
-nav.desk a{color:rgba(243,238,228,.85);transition:color .18s var(--ease)}
+nav.desk a{color:rgba(243,238,228,.85);padding:.75rem 0;transition:color .18s var(--ease)}
 nav.desk a:hover{color:#fff}
 .tools{display:flex;align-items:center;gap:.5rem}
 .icon-btn{
@@ -199,7 +199,7 @@ nav.desk a:hover{color:#fff}
   font-family:var(--display);font-size:clamp(4.5rem,13vw,9rem);line-height:.82;
   letter-spacing:-.05em;font-weight:300;color:var(--lousa);margin:.5rem 0 0
 }
-.anno span{display:block;font-size:.16em;letter-spacing:.24em;text-transform:uppercase;font-family:var(--sans);font-weight:600;color:var(--granito);margin-bottom:1.1rem}
+.anno span{display:block;font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;font-family:var(--sans);font-weight:600;color:var(--granito);margin-bottom:1.1rem}
 .desde-foto{margin-top:clamp(2.5rem,5vw,4rem);position:relative}
 .desde-foto img{width:100%;height:clamp(11rem,26vw,19rem);object-fit:cover;object-position:center 60%}
 .desde-foto figcaption{margin-top:.85rem;font-size:.8125rem;color:var(--granito);text-align:right}
@@ -221,24 +221,32 @@ nav.desk a:hover{color:#fff}
 .indice li:first-child a{padding-left:0}
 .indice a:hover{color:var(--lousa);border-bottom-color:var(--lousa)}
 
-.grupo{margin-top:clamp(3rem,6vw,4.5rem);scroll-margin-top:5rem}
-.grupo-top{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;padding-bottom:.9rem;border-bottom:1px solid var(--lousa)}
-.grupo-top h3{font-size:clamp(1.6rem,3vw,2.15rem)}
+.grupo{margin-top:clamp(3.5rem,7vw,5.5rem);scroll-margin-top:5rem}
+.grupo-top{
+  display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;
+  padding-bottom:1rem;margin-bottom:.5rem;border-bottom:1px solid var(--lousa)
+}
+.grupo-top h3{font-size:clamp(1.75rem,3.2vw,2.35rem);font-weight:500}
 .grupo-top .alt{font-family:var(--display);font-style:italic;font-size:1.0625rem;color:var(--granito)}
-.remite{margin-top:1rem;font-size:.875rem;color:var(--granito)}
-.remite a{color:var(--pemento);border-bottom:1px solid currentColor;padding-bottom:1px;font-weight:500}
 
 .platos{list-style:none;margin:0;padding:0}
 .platos li{
-  display:flex;align-items:baseline;gap:1.25rem;
-  padding:.85rem 0;border-bottom:1px solid var(--fio-soft);break-inside:avoid
+  display:flex;align-items:baseline;gap:1rem;
+  padding:1.05rem 0;border-bottom:1px solid var(--fio-soft);break-inside:avoid
 }
 .platos .nm{flex:1;min-width:0}
-.platos .gl{font-family:var(--display);font-size:1.125rem;display:block;line-height:1.3}
-.platos .es{font-family:var(--display);font-style:italic;font-size:.875rem;color:var(--granito);display:block;margin-top:.05rem;line-height:1.35}
-.platos .pr{font-weight:600;font-size:.9375rem;font-variant-numeric:tabular-nums;flex:none;white-space:nowrap;text-align:right}
-.platos .mas{display:block;font-size:.75rem;font-weight:400;color:var(--granito);margin-top:.1rem}
-@media(min-width:820px){.dos{columns:2;column-gap:clamp(2.5rem,5vw,4.5rem)}}
+.platos .gl{
+  font-family:var(--display);font-size:clamp(1.1875rem,1.5vw,1.3125rem);font-weight:500;
+  display:block;line-height:1.28;letter-spacing:-.012em
+}
+.platos .es{font-family:var(--display);font-style:italic;font-size:.9375rem;color:var(--granito);display:block;margin-top:.15rem;line-height:1.35}
+/* columna de precio de ancho fijo: todos quedan alineados entre sí */
+.platos .pr{
+  flex:none;min-width:5rem;text-align:right;white-space:nowrap;
+  font-size:1rem;font-weight:600;font-variant-numeric:tabular-nums
+}
+.platos .mas{display:block;font-size:.75rem;font-weight:400;color:var(--granito);margin-top:.15rem}
+@media(min-width:820px){.dos{columns:2;column-gap:clamp(3rem,5.5vw,5rem)}}
 .par{display:grid}
 @media(min-width:820px){.par{grid-template-columns:1fr 1fr;column-gap:clamp(2.5rem,5vw,4.5rem)}}
 .alergenos{margin-top:2.75rem;padding-top:1.25rem;border-top:1px solid var(--fio);font-size:.875rem;color:var(--granito)}
@@ -256,17 +264,17 @@ nav.desk a:hover{color:#fff}
 /* ---------- opiniones ---------- */
 .op{background:var(--cal-3);padding-block:clamp(4rem,9vw,8rem);border-block:1px solid var(--fio)}
 .op-grid{display:grid;gap:clamp(2.5rem,5vw,4rem)}
-@media(min-width:900px){.op-grid{grid-template-columns:8fr 4fr;gap:clamp(3rem,6vw,5rem);align-items:end}}
+@media(min-width:900px){.op-grid{grid-template-columns:9fr 4fr;gap:clamp(3rem,6vw,5.5rem);align-items:end}}
 .op blockquote{
   margin:0;font-family:var(--display);font-weight:300;
-  font-size:clamp(1.75rem,4.4vw,3.1rem);line-height:1.14;letter-spacing:-.03em;max-width:20ch
+  font-size:clamp(2rem,5.2vw,3.75rem);line-height:1.1;letter-spacing:-.035em;max-width:19ch
 }
 .op blockquote em{font-style:normal;color:var(--pemento)}
-.op .fuente{display:block;margin-top:1.5rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granito);font-weight:600}
+.op .fuente{display:block;margin-top:1.75rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granito);font-weight:600}
 .op-mas{list-style:none;margin:0;padding:0}
-.op-mas li + li{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--fio)}
-.op-mas p{font-family:var(--display);font-size:1.0625rem;line-height:1.5;color:var(--lousa-2)}
-.op-mas span{display:block;margin-top:.55rem;font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granito);font-weight:600}
+.op-mas li + li{margin-top:1.35rem;padding-top:1.35rem;border-top:1px solid var(--fio)}
+.op-mas p{font-family:var(--display);font-size:.9375rem;line-height:1.5;color:var(--granito)}
+.op-mas span{display:block;margin-top:.55rem;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--granito);font-weight:600}
 .google{margin-top:clamp(2.5rem,5vw,3.5rem);padding-top:1.5rem;border-top:1px solid var(--fio);font-size:.9375rem;color:var(--granito)}
 .google b{color:var(--lousa);font-weight:600;font-variant-numeric:tabular-nums}
 
@@ -278,9 +286,9 @@ nav.desk a:hover{color:#fff}
 .datos{margin:2.5rem 0 0}
 .datos > div{display:grid;gap:.35rem;padding:1.1rem 0;border-top:1px solid var(--fio)}
 .datos > div:last-child{border-bottom:1px solid var(--fio)}
-.datos dt{font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granito);font-weight:600}
+.datos dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--granito);font-weight:600}
 .datos dd{margin:0;font-family:var(--display);font-size:1.25rem;line-height:1.4;font-variant-numeric:tabular-nums}
-.datos dd.tel a{border-bottom:1px solid var(--fio);padding-bottom:2px}
+.datos dd.tel a{display:inline-block;padding:.35rem 0;border-bottom:1px solid var(--fio)}
 .datos dd.tel a:hover{border-color:var(--pemento);color:var(--pemento)}
 .visitar-acc{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
 .mapa{background:var(--cal-2);min-height:min(28rem,80vw);border:1px solid var(--fio)}
@@ -291,11 +299,13 @@ footer{background:var(--lousa);color:rgba(243,238,228,.72);padding-block:clamp(3
 .pie{display:grid;gap:2.5rem}
 @media(min-width:760px){.pie{grid-template-columns:1.4fr 1fr 1fr;gap:3rem}}
 .pie h2{font-size:1.5rem;color:var(--cal);margin:0 0 .75rem}
-.pie dt{font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,238,228,.55);font-weight:600;margin-bottom:.4rem}
+.pie dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(243,238,228,.6);font-weight:600;margin-bottom:.4rem}
 .pie dd{margin:0 0 1.25rem;line-height:1.6}
 .pie a:hover{color:#fff}
+/* area tactil holgada en los enlaces del pie */
+.pie dd a,.pie nav a{display:inline-block;padding:.7rem 0;line-height:1.3}
 .pie .tel{color:var(--mel);font-variant-numeric:tabular-nums}
-.pie nav{display:grid;gap:.6rem}
+.pie nav{display:grid}
 .pie nav a{color:rgba(243,238,228,.72)}
 
 /* ---------- movimiento: sólo apariciones ---------- */
@@ -386,8 +396,6 @@ footer{background:var(--lousa);color:rgba(243,238,228,.72);padding-block:clamp(3
       </div>
       <p class="hero-meta">
         <span class="estado" id="estado" data-open="0"><span class="punto"></span><span id="estado-txt">Todos los días</span></span>
-        <span class="sep">/</span>
-        <span><b>4,5</b> en Google, más de <b>3.600</b> valoraciones</span>
       </p>
     </div>
   </section>
@@ -428,8 +436,8 @@ footer{background:var(--lousa);color:rgba(243,238,228,.72);padding-block:clamp(3
           <p class="anno"><span>El local</span>2002</p>
         </div>
         <div class="rv">
-          <p class="say">O Recuncho abrió en 2002 en la Rúa Pastor Díaz y no se ha movido de ahí. Siete mesas, piedra vista y un faro pintado en la pared del fondo.</p>
-          <p class="say">Se come marisco: pulpo, vieiras, luriñas, navajas, percebes. Y lo que sale de la brasa y de la cazuela — churrascos, arroces, croquetas caseras.</p>
+          <p class="say">Abrimos en 2002 en la Rúa Pastor Díaz y no nos hemos movido de ahí. Siete mesas, piedra vista y un faro pintado en la pared del fondo.</p>
+          <p class="say">Marisco: pulpo, vieiras, luriñas, navajas, percebes. Y lo que sale de la brasa — churrascos, arroces, croquetas caseras.</p>
         </div>
       </div>
       <figure class="desde-foto rv">
@@ -446,11 +454,12 @@ footer{background:var(--lousa);color:rgba(243,238,228,.72);padding-block:clamp(3
   <section class="carta" id="carta">
     <div class="wrap">
       <div class="carta-top rv">
-        <p class="kicker warm">Carta</p>
-        <h2>Lo que hay hoy</h2>
+        <p class="kicker warm">Cocina gallega</p>
+        <h2>La carta</h2>
       </div>
 
       <ul class="indice">
+        <li><a href="#polbo">Polbo</a></li>
         <li><a href="#g-racions">Racións</a></li>
         <li><a href="#g-entrantes">Entrantes</a></li>
         <li><a href="#g-arroces">Arroces</a></li>
@@ -462,7 +471,6 @@ footer{background:var(--lousa);color:rgba(243,238,228,.72);padding-block:clamp(3
       <!-- Racións -->
       <div class="grupo" id="g-racions">
         <div class="grupo-top"><h3 lang="gl">Racións</h3><span class="alt">Raciones</span></div>
-        <p class="remite">El polbo, <a href="#polbo">en la especialidad de la casa</a>.</p>
         <ul class="platos dos">
           <li><span class="nm"><span class="gl" lang="gl">Ameixas á prancha</span><span class="es">Almejas a la plancha</span></span></li>
           <li><span class="nm"><span class="gl" lang="gl">Berberechos á prancha</span><span class="es">Berberechos a la plancha</span></span></li>
