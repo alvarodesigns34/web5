@@ -5,258 +5,301 @@
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>Mesón O Recuncho — Tapería gallega de marisco en Viveiro (Lugo)</title>
 <meta name="description" content="Mesón O Recuncho, tapería gallega de marisco en la Rúa Pastor Díaz de Viveiro desde 2002. Pulpo á feira, vieiras, luriñas y arroces. Abierto todos los días. 982 563 191." />
-<meta name="theme-color" content="#211d19" />
+<meta name="theme-color" content="#1b1815" />
 <link rel="icon" type="image/svg+xml" href="favicon.svg" />
 <link rel="canonical" href="https://alvarodesigns34.github.io/web5/" />
 <meta property="og:type" content="restaurant" />
 <meta property="og:locale" content="es_ES" />
+<meta property="og:site_name" content="Mesón O Recuncho" />
 <meta property="og:title" content="Mesón O Recuncho — Tapería gallega de marisco en Viveiro" />
 <meta property="og:description" content="Pulpo á feira, vieiras y cocina gallega en el centro de Viveiro desde 2002. Abierto todos los días. 982 563 191." />
 <meta property="og:image" content="https://alvarodesigns34.github.io/web5/img/polbo.jpg" />
+<meta property="og:image:alt" content="Pulpo con pimentón y sal gruesa en plato de madera, en Mesón O Recuncho." />
 <meta property="og:url" content="https://alvarodesigns34.github.io/web5/" />
 <meta name="twitter:card" content="summary_large_image" />
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet" />
+<link rel="preload" as="image" href="img/local.jpg" />
+<link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,300;1,6..72,400&display=swap" rel="stylesheet" />
 <style>
+/* ============================================================
+   Mesón O Recuncho · Viveiro
+   Paleta tomada del propio local: cal y granito de la fachada,
+   pizarra del suelo, madera de las mesas, pimentón del pulpo.
+   ============================================================ */
 :root{
-  /* --- superficie y tinta: cal, granito y pizarra del propio local --- */
-  --cal:#f4efe6;
-  --cal-2:#eae2d4;
+  --cal:#f3eee4;          /* pared encalada */
+  --cal-2:#e9e1d2;
   --cal-3:#fbf8f2;
-  --lousa:#211d19;
-  --lousa-2:#423a31;
-  --granito:#6f6459;
-  --fio:#d8cebc;
-  --fio-soft:#e3dacb;
-  /* --- acentos --- */
-  --pemento:#b8431f;
-  --pemento-2:#8e3115;
-  --mel:#c9a063;
-  --mar:#4a6b60;
+  --lousa:#1b1815;        /* pizarra del suelo */
+  --lousa-2:#3d362e;
+  --granito:#6f6459;      /* gris cálido de la piedra */
+  --fio:#d5cab6;
+  --fio-soft:#e2d9c9;
+  --pemento:#a83c1b;      /* pimentón */
+  --pemento-2:#8a2f12;
+  --mel:#c9a063;          /* madera de las contraventanas */
+  --mar:#4a6b60;          /* verde de las cortinas */
 
   --display:"Newsreader",Georgia,"Times New Roman",serif;
   --sans:"Karla",ui-sans-serif,system-ui,-apple-system,sans-serif;
 
-  --max:70rem;
-  --gutter:clamp(1.25rem,5vw,2.5rem);
+  --max:72rem;
+  --gutter:clamp(1.375rem,5vw,3rem);
   --edge:max(var(--gutter),calc((100vw - var(--max)) / 2));
 
-  --dur-fast:180ms;
-  --dur-base:280ms;
-  --ease-out:cubic-bezier(.16,1,.3,1);
+  --ease:cubic-bezier(.16,1,.3,1);
+
+  /* onda de una sola línea, tomada del mural del faro del comedor */
+  --onda:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0,20 C100,6 200,34 300,20 C400,6 500,34 600,20 C700,6 800,34 900,20 C1000,6 1100,34 1200,20' fill='none' stroke='%236f6459' stroke-width='1.1'/%3E%3C/svg%3E");
 }
 
 *,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:4.5rem}
 body{
   margin:0;background:var(--cal);color:var(--lousa);
   font-family:var(--sans);font-size:1.0625rem;line-height:1.6;
-  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden
 }
-img{display:block;max-width:100%}
+/* height:auto neutraliza el atributo height del HTML, que si no gana a
+   aspect-ratio y deja las cajas con la proporción equivocada */
+img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:var(--display);font-optical-sizing:auto;text-wrap:balance;margin:0}
+h1,h2,h3{font-family:var(--display);font-optical-sizing:auto;text-wrap:balance;margin:0;font-weight:400}
 p{margin:0;text-wrap:pretty}
-:focus-visible{outline:2px solid var(--pemento);outline-offset:3px;border-radius:2px}
-
+:focus-visible{outline:2px solid var(--pemento);outline-offset:3px}
 .wrap{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
-.skip{position:absolute;left:-999px;top:0}
-.skip:focus{left:1rem;top:1rem;z-index:80;background:var(--cal-3);padding:.6rem 1rem;border-radius:.4rem}
+.skip{position:absolute;left:-9999px}
+.skip:focus{left:1rem;top:1rem;z-index:90;background:var(--cal-3);padding:.6rem 1rem}
 
-/* ---------- tipografía ---------- */
-h1{font-size:clamp(2.9rem,8.5vw,5.25rem);line-height:.98;letter-spacing:-.035em;font-weight:500}
-h2{font-size:clamp(1.9rem,4vw,2.9rem);line-height:1.08;letter-spacing:-.025em;font-weight:500}
-h3{font-size:clamp(1.15rem,2vw,1.35rem);line-height:1.25;letter-spacing:-.012em;font-weight:600}
-.eyebrow{
-  font-family:var(--sans);font-size:.75rem;font-weight:600;line-height:1.2;
-  letter-spacing:.16em;text-transform:uppercase;color:var(--pemento);margin:0
+/* ---------- escala tipográfica ---------- */
+h1{font-size:clamp(3rem,11vw,7rem);line-height:.92;letter-spacing:-.04em;font-weight:300}
+h2{font-size:clamp(2rem,5vw,3.5rem);line-height:1.04;letter-spacing:-.03em}
+h3{font-size:clamp(1.5rem,2.8vw,2rem);line-height:1.12;letter-spacing:-.025em}
+.kicker{
+  font-family:var(--sans);font-size:.75rem;font-weight:600;
+  letter-spacing:.2em;text-transform:uppercase;color:var(--granito)
 }
-.eyebrow.quiet{color:var(--granito)}
-.eyebrow.gold{color:var(--mel)}
-.lede{font-size:clamp(1.05rem,1.6vw,1.2rem);line-height:1.5;color:var(--lousa-2);max-width:34ch}
-.muted{color:var(--granito);font-size:.9375rem}
-.prose p{color:var(--lousa-2);line-height:1.65;max-width:62ch}
-.prose p + p{margin-top:1rem}
+.kicker.warm{color:var(--pemento)}
+.kicker.gold{color:var(--mel)}
+.say{font-family:var(--display);font-size:clamp(1.15rem,2vw,1.4rem);line-height:1.55;color:var(--lousa-2)}
+.say + .say{margin-top:1.15rem}
 
-/* ---------- botones ---------- */
+/* onda separadora */
+.onda{height:2.25rem;background:var(--onda) center/1200px 100% repeat-x;opacity:.5}
+
+/* ---------- botones: bordes casi rectos, nada de píldoras ---------- */
 .btn{
   display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
-  min-height:3rem;padding:0 1.35rem;border:1px solid transparent;border-radius:.55rem;
-  font-family:var(--sans);font-size:.9375rem;font-weight:600;letter-spacing:.005em;
-  cursor:pointer;transition:background var(--dur-fast) var(--ease-out),color var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out)
+  min-height:3.125rem;padding:0 1.5rem;border:1px solid transparent;border-radius:3px;
+  font-family:var(--sans);font-size:.875rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  cursor:pointer;transition:background .18s var(--ease),color .18s var(--ease),border-color .18s var(--ease)
 }
-.btn svg{width:1.05em;height:1.05em;flex:none}
+.btn svg{width:1.1em;height:1.1em;flex:none}
 .btn-fill{background:var(--pemento);color:#fff}
 .btn-fill:hover{background:var(--pemento-2)}
-.btn-line{border-color:var(--fio);color:var(--lousa);background:transparent}
-.btn-line:hover{background:var(--cal-3);border-color:var(--granito)}
-.btn-ghost{border-color:rgba(244,239,230,.32);color:var(--cal);background:transparent}
-.btn-ghost:hover{background:rgba(244,239,230,.1)}
-.btn-sm{min-height:2.5rem;padding:0 1rem;font-size:.875rem}
+.btn-line{border-color:var(--lousa);color:var(--lousa)}
+.btn-line:hover{background:var(--lousa);color:var(--cal)}
+.btn-ghost{border-color:rgba(243,238,228,.5);color:#fff}
+.btn-ghost:hover{background:rgba(243,238,228,.14)}
+.btn-sm{min-height:2.5rem;padding:0 1rem;font-size:.75rem}
 
 /* ---------- cabecera ---------- */
-header{position:fixed;inset:0 0 auto 0;z-index:60;background:var(--lousa);color:var(--cal)}
-.bar{display:flex;align-items:center;justify-content:space-between;gap:1rem;height:4rem}
-.brand{font-family:var(--display);font-size:1.2rem;font-weight:500;letter-spacing:-.02em;white-space:nowrap}
-nav.desk{display:none;align-items:center;gap:2rem;font-size:.9375rem;font-weight:500}
-nav.desk a:not(.btn){color:rgba(244,239,230,.82);transition:color var(--dur-fast) var(--ease-out)}
-nav.desk a:not(.btn):hover{color:var(--cal)}
-.burger{
-  width:2.75rem;height:2.75rem;display:grid;place-items:center;
-  background:none;border:1px solid rgba(244,239,230,.25);border-radius:.5rem;color:var(--cal);cursor:pointer
+header{
+  position:fixed;inset:0 0 auto 0;z-index:70;color:var(--cal);
+  transition:background .3s var(--ease),border-color .3s var(--ease);
+  border-bottom:1px solid transparent
 }
-.burger svg{width:1.15rem;height:1.15rem}
-@media(min-width:880px){nav.desk{display:flex}.burger{display:none}.drawer{display:none}}
-.drawer{display:none;border-top:1px solid rgba(244,239,230,.12);background:var(--lousa);padding:.5rem var(--gutter) 1.5rem}
+header.solid{background:var(--lousa);border-bottom-color:rgba(243,238,228,.14)}
+.bar{display:flex;align-items:center;justify-content:space-between;gap:.75rem;height:4.5rem}
+.brand{font-family:var(--display);font-size:1.25rem;letter-spacing:-.02em;white-space:nowrap}
+nav.desk{display:none;align-items:center;gap:2.25rem;font-size:.8125rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+nav.desk a{color:rgba(243,238,228,.85);transition:color .18s var(--ease)}
+nav.desk a:hover{color:#fff}
+.tools{display:flex;align-items:center;gap:.5rem}
+.icon-btn{
+  width:2.75rem;height:2.75rem;display:grid;place-items:center;border-radius:3px;
+  background:none;border:1px solid rgba(243,238,228,.32);color:var(--cal);cursor:pointer
+}
+.icon-btn svg{width:1.1rem;height:1.1rem}
+.icon-btn:hover{background:rgba(243,238,228,.12)}
+@media(min-width:900px){
+  nav.desk{display:flex}
+  .burger{display:none}
+  .tel-icon{display:none}
+}
+@media(max-width:899px){.tel-desk{display:none}}
+.drawer{display:none;background:var(--lousa);padding:.25rem var(--gutter) 1.75rem;border-top:1px solid rgba(243,238,228,.14)}
 .drawer.open{display:block}
-.drawer a{display:flex;align-items:center;min-height:3.25rem;font-size:1.0625rem;color:rgba(244,239,230,.85);border-bottom:1px solid rgba(244,239,230,.08)}
-.drawer .btn{margin-top:1rem;width:100%}
-
-/* ---------- hero ---------- */
-.hero{padding-top:4rem;background:var(--cal-3);border-bottom:1px solid var(--fio)}
-.hero-grid{display:grid}
-.hero-copy{padding:clamp(3rem,7vw,5.5rem) var(--gutter) clamp(2.5rem,5vw,4rem)}
-.hero-media{position:relative;background:var(--cal-2);aspect-ratio:4/3}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:center 42%}
-@media(min-width:900px){
-  .hero-grid{grid-template-columns:45fr 55fr;align-items:stretch}
-  .hero-copy{
-    padding:clamp(4.5rem,7vw,6.5rem) 3.5rem clamp(4.5rem,7vw,6.5rem) var(--edge);
-    margin-left:auto;display:flex;flex-direction:column;justify-content:center
-  }
-  .hero-media{aspect-ratio:auto;min-height:34rem}
+.drawer a{
+  display:flex;align-items:center;min-height:3.5rem;
+  font-family:var(--display);font-size:1.5rem;letter-spacing:-.02em;
+  color:rgba(243,238,228,.9);border-bottom:1px solid rgba(243,238,228,.12)
 }
-.hero h1{margin:.6rem 0 0}
-.hero .lede{margin-top:1.1rem}
-.cta-row{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.85rem}
-.rating{display:flex;align-items:center;gap:.6rem;margin-top:1.75rem;font-size:.9375rem;color:var(--granito)}
-.stars{color:var(--pemento);letter-spacing:.08em;font-size:.875rem}
-.rating b{color:var(--lousa);font-weight:600;font-variant-numeric:tabular-nums}
+.drawer .btn{margin-top:1.5rem;width:100%}
 
-/* estado abierto / cerrado */
-.status{display:inline-flex;align-items:center;gap:.5rem;margin-top:1.5rem;font-size:.875rem;font-weight:500;color:var(--lousa-2)}
-.dot{width:.5rem;height:.5rem;border-radius:50%;background:var(--granito);flex:none}
-.status[data-open="1"] .dot{background:var(--mar);box-shadow:0 0 0 3px rgba(74,107,96,.18)}
-.status .det{color:var(--granito);font-weight:400}
+/* ---------- hero: la foto manda ---------- */
+.hero{position:relative;min-height:92svh;display:flex;align-items:flex-end;background:var(--lousa);overflow:hidden}
+@media(min-width:900px){.hero{min-height:88svh}}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+@media(max-width:899px){.hero-bg{object-position:center 22%}}
+.hero-scrim{
+  position:absolute;inset:0;
+  background:
+    /* banda superior: sostiene la cabecera sobre la parte clara del mural */
+    linear-gradient(to bottom,rgba(14,12,10,.74) 0%,rgba(14,12,10,.30) 14%,rgba(14,12,10,0) 32%),
+    /* banda inferior: sostiene el nombre y los botones. Oscurece mesas y
+       sillas y deja limpia la mitad de arriba, que es donde está el mural. */
+    linear-gradient(to top,rgba(14,12,10,.97) 0%,rgba(14,12,10,.93) 30%,rgba(14,12,10,.84) 48%,rgba(14,12,10,.52) 64%,rgba(14,12,10,.14) 82%,rgba(14,12,10,0) 100%)
+}
+.hero-inner{position:relative;z-index:1;padding-bottom:clamp(2.75rem,6vw,4.5rem);color:#fff;width:100%}
+.hero h1{color:#fff;margin:0}
+.hero .kicker{color:var(--mel);margin-top:1.1rem}
+.hero-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.hero-meta{
+  display:flex;align-items:center;flex-wrap:wrap;gap:.5rem .9rem;margin-top:1.75rem;
+  font-size:.875rem;color:rgba(243,238,228,.82)
+}
+.hero-meta b{color:#fff;font-weight:600;font-variant-numeric:tabular-nums}
+.hero-meta .sep{color:rgba(243,238,228,.45)}
+@media(max-width:639px){
+  .hero-meta{display:grid;gap:.4rem;justify-items:start}
+  .hero-meta .sep{display:none}
+}
+.estado{display:inline-flex;align-items:center;gap:.5rem;font-weight:600;color:#fff}
+.punto{width:.45rem;height:.45rem;border-radius:50%;background:rgba(243,238,228,.5);flex:none}
+.estado[data-open="1"] .punto{background:#7fb39f;box-shadow:0 0 0 3px rgba(127,179,159,.25)}
 
-/* ---------- secciones ---------- */
-section{scroll-margin-top:4rem}
-.pad{padding-block:clamp(3.5rem,8vw,7rem)}
-.rule{border:0;border-top:1px solid var(--fio);margin:0}
-
-.intro-grid{display:grid;gap:1.75rem}
-@media(min-width:820px){.intro-grid{grid-template-columns:5fr 7fr;gap:3.5rem;align-items:start}}
-
-/* ---------- bloque del pulpo (rompe la retícula) ---------- */
-.polbo{background:var(--lousa);color:var(--cal)}
-.polbo-grid{display:grid}
-.polbo-media{aspect-ratio:1/1;background:#17140f}
+/* ---------- especialidad: el pulpo ---------- */
+.polbo{background:var(--lousa);color:var(--cal);display:grid}
+.polbo-media{position:relative;aspect-ratio:4/3;background:#12100d}
 .polbo-media img{width:100%;height:100%;object-fit:cover}
-.polbo-copy{padding:clamp(2.75rem,6vw,5rem) var(--gutter)}
+.polbo-copy{padding:clamp(3rem,7vw,6rem) var(--gutter)}
 @media(min-width:900px){
-  .polbo-grid{grid-template-columns:52fr 48fr;align-items:center}
-  .polbo-media{aspect-ratio:auto;min-height:33rem}
-  .polbo-copy{padding:clamp(4rem,6vw,6rem) var(--edge) clamp(4rem,6vw,6rem) 3.5rem;max-width:38rem}
+  .polbo{grid-template-columns:56fr 44fr;align-items:center}
+  .polbo-media{aspect-ratio:auto;height:100%;min-height:40rem}
+  .polbo-copy{padding:clamp(4rem,7vw,7rem) var(--edge) clamp(4rem,7vw,7rem) clamp(2.5rem,4vw,4rem);max-width:40rem}
 }
-.polbo h2{margin:.65rem 0 0;color:var(--cal)}
-.polbo .note{margin-top:1rem;color:rgba(244,239,230,.72);max-width:38ch;line-height:1.55}
-.polbo-list{list-style:none;margin:2.25rem 0 0;padding:0;border-top:1px solid rgba(244,239,230,.16)}
-.polbo-list li{display:flex;align-items:baseline;gap:1rem;padding:.95rem 0;border-bottom:1px solid rgba(244,239,230,.16)}
-.polbo-list .n{flex:1;min-width:0}
-.polbo-list .gl{font-family:var(--display);font-size:1.2rem;font-weight:500;letter-spacing:-.01em;display:block}
-.polbo-list .es{font-family:var(--display);font-style:italic;font-size:.9375rem;color:rgba(244,239,230,.6);display:block;margin-top:.1rem}
-.polbo-list .p{font-weight:600;font-size:1.0625rem;color:var(--mel);font-variant-numeric:tabular-nums;flex:none}
-.polbo .also{margin-top:1.5rem;font-size:.9375rem;color:rgba(244,239,230,.62);line-height:1.55}
-.polbo .also b{color:rgba(244,239,230,.85);font-weight:500}
+.polbo h2{color:#fff;margin:.85rem 0 0}
+.polbo-say{margin-top:1.15rem;max-width:34ch;color:rgba(243,238,228,.78);font-family:var(--display);font-size:1.125rem;line-height:1.55}
+.destacados{list-style:none;margin:2.5rem 0 0;padding:0}
+.destacados li{display:flex;align-items:baseline;gap:1.25rem;padding:1.05rem 0;border-bottom:1px solid rgba(243,238,228,.18)}
+.destacados li:first-child{border-top:1px solid rgba(243,238,228,.18)}
+.destacados .nm{flex:1;min-width:0}
+.destacados .gl{font-family:var(--display);font-size:1.375rem;display:block;line-height:1.2}
+.destacados .es{font-family:var(--display);font-style:italic;font-size:.9375rem;color:rgba(243,238,228,.62);display:block;margin-top:.15rem}
+.destacados .pr{font-size:1.0625rem;font-weight:600;color:var(--mel);font-variant-numeric:tabular-nums;flex:none}
+.polbo .btn{margin-top:2.25rem}
+
+/* ---------- desde 2002 ---------- */
+.desde{padding-block:clamp(4rem,9vw,8rem) 0;overflow:hidden}
+.desde-grid{display:grid;gap:clamp(2.5rem,5vw,4rem);align-items:start}
+@media(min-width:900px){.desde-grid{grid-template-columns:1fr 1fr;gap:clamp(3rem,6vw,6rem)}}
+.anno{
+  font-family:var(--display);font-size:clamp(4.5rem,13vw,9rem);line-height:.82;
+  letter-spacing:-.05em;font-weight:300;color:var(--lousa);margin:.5rem 0 0
+}
+.anno span{display:block;font-size:.16em;letter-spacing:.24em;text-transform:uppercase;font-family:var(--sans);font-weight:600;color:var(--granito);margin-bottom:1.1rem}
+.desde-foto{margin-top:clamp(2.5rem,5vw,4rem);position:relative}
+.desde-foto img{width:100%;height:clamp(11rem,26vw,19rem);object-fit:cover;object-position:center 60%}
+.desde-foto figcaption{margin-top:.85rem;font-size:.8125rem;color:var(--granito);text-align:right}
 
 /* ---------- carta ---------- */
-.carta{background:var(--cal)}
-.carta-head{max-width:52ch}
-.carta h2{margin:.6rem 0 0}
-.block{margin-top:clamp(2.75rem,5vw,4rem)}
-.block-head{display:flex;align-items:baseline;gap:.65rem;flex-wrap:wrap;padding-bottom:.85rem;border-bottom:2px solid var(--lousa)}
-.block-head h3{font-size:clamp(1.35rem,2.4vw,1.7rem);font-weight:500;letter-spacing:-.02em}
-.block-head .alt{font-family:var(--display);font-style:italic;font-size:1rem;color:var(--granito)}
-.items{list-style:none;margin:0;padding:0}
-.items li{
-  display:flex;align-items:baseline;gap:1rem;
-  padding:.8rem 0;border-bottom:1px solid var(--fio-soft);break-inside:avoid
+.carta{padding-block:clamp(3.5rem,8vw,7rem)}
+.carta-top{max-width:44ch}
+.carta-top h2{margin:.85rem 0 0}
+.indice{
+  display:flex;gap:0;margin:2.5rem 0 0;padding:0 0 .25rem;list-style:none;
+  overflow-x:auto;scrollbar-width:none;border-bottom:1px solid var(--fio)
 }
-.items .n{flex:1;min-width:0}
-.items .gl{font-family:var(--display);font-size:1.0625rem;font-weight:500;letter-spacing:-.005em;display:block;line-height:1.3}
-.items .es{font-family:var(--display);font-style:italic;font-size:.875rem;color:var(--granito);display:block;margin-top:.05rem;line-height:1.35}
-.items .p{font-weight:600;font-size:.9375rem;font-variant-numeric:tabular-nums;flex:none;white-space:nowrap}
-.items .x{display:block;font-size:.75rem;font-weight:400;color:var(--granito);margin-top:.1rem;text-align:right}
-@media(min-width:760px){.two{columns:2;column-gap:3.5rem}}
-.pair{display:grid;gap:0}
-@media(min-width:760px){.pair{grid-template-columns:1fr 1fr;column-gap:3.5rem}.pair .block{margin-top:clamp(2.75rem,5vw,4rem)}}
-.carta-foot{margin-top:2.5rem;padding-top:1.25rem;border-top:1px solid var(--fio)}
+.indice::-webkit-scrollbar{display:none}
+.indice a{
+  display:block;white-space:nowrap;padding:.7rem 1.1rem .8rem;
+  font-size:.75rem;font-weight:600;letter-spacing:.13em;text-transform:uppercase;color:var(--granito);
+  border-bottom:2px solid transparent;margin-bottom:-1px;transition:color .18s var(--ease),border-color .18s var(--ease)
+}
+.indice li:first-child a{padding-left:0}
+.indice a:hover{color:var(--lousa);border-bottom-color:var(--lousa)}
 
-/* ---------- galería ---------- */
-.gal{display:grid;gap:0;background:var(--lousa)}
-.gal figure{margin:0;position:relative}
-.gal img{width:100%;height:100%;object-fit:cover;aspect-ratio:1/1}
-@media(min-width:760px){
-  .gal{grid-template-columns:5fr 4fr}
-  .gal img{aspect-ratio:auto;height:100%;min-height:26rem}
-}
-.gal figcaption{
-  position:absolute;left:0;bottom:0;right:0;padding:2.5rem 1.5rem 1.25rem;
-  font-size:.8125rem;color:rgba(244,239,230,.9);
-  background:linear-gradient(to top,rgba(23,20,15,.8),transparent)
-}
+.grupo{margin-top:clamp(3rem,6vw,4.5rem);scroll-margin-top:5rem}
+.grupo-top{display:flex;align-items:baseline;gap:.7rem;flex-wrap:wrap;padding-bottom:.9rem;border-bottom:1px solid var(--lousa)}
+.grupo-top h3{font-size:clamp(1.6rem,3vw,2.15rem)}
+.grupo-top .alt{font-family:var(--display);font-style:italic;font-size:1.0625rem;color:var(--granito)}
+.remite{margin-top:1rem;font-size:.875rem;color:var(--granito)}
+.remite a{color:var(--pemento);border-bottom:1px solid currentColor;padding-bottom:1px;font-weight:500}
 
-/* ---------- reseñas ---------- */
-.op{background:var(--cal-3);border-block:1px solid var(--fio)}
+.platos{list-style:none;margin:0;padding:0}
+.platos li{
+  display:flex;align-items:baseline;gap:1.25rem;
+  padding:.85rem 0;border-bottom:1px solid var(--fio-soft);break-inside:avoid
+}
+.platos .nm{flex:1;min-width:0}
+.platos .gl{font-family:var(--display);font-size:1.125rem;display:block;line-height:1.3}
+.platos .es{font-family:var(--display);font-style:italic;font-size:.875rem;color:var(--granito);display:block;margin-top:.05rem;line-height:1.35}
+.platos .pr{font-weight:600;font-size:.9375rem;font-variant-numeric:tabular-nums;flex:none;white-space:nowrap;text-align:right}
+.platos .mas{display:block;font-size:.75rem;font-weight:400;color:var(--granito);margin-top:.1rem}
+@media(min-width:820px){.dos{columns:2;column-gap:clamp(2.5rem,5vw,4.5rem)}}
+.par{display:grid}
+@media(min-width:820px){.par{grid-template-columns:1fr 1fr;column-gap:clamp(2.5rem,5vw,4.5rem)}}
+.alergenos{margin-top:2.75rem;padding-top:1.25rem;border-top:1px solid var(--fio);font-size:.875rem;color:var(--granito)}
+
+/* pareja de fotos dentro de la carta, tamaños distintos */
+.pareja{display:grid;gap:1rem;margin-top:clamp(3rem,6vw,4.5rem)}
+@media(min-width:760px){.pareja{grid-template-columns:7fr 5fr;gap:1.5rem;align-items:end}}
+.pareja figure{margin:0}
+.pareja img{width:100%;object-fit:cover}
+.pareja .alta img{aspect-ratio:4/3}
+.pareja .baja img{aspect-ratio:3/4}
+@media(min-width:760px){.pareja .baja{margin-bottom:-2.5rem}}
+.pareja figcaption{margin-top:.7rem;font-size:.8125rem;color:var(--granito)}
+
+/* ---------- opiniones ---------- */
+.op{background:var(--cal-3);padding-block:clamp(4rem,9vw,8rem);border-block:1px solid var(--fio)}
+.op-grid{display:grid;gap:clamp(2.5rem,5vw,4rem)}
+@media(min-width:900px){.op-grid{grid-template-columns:8fr 4fr;gap:clamp(3rem,6vw,5rem);align-items:end}}
 .op blockquote{
-  margin:0;max-width:24ch;font-family:var(--display);font-weight:400;
-  font-size:clamp(1.6rem,3.6vw,2.6rem);line-height:1.2;letter-spacing:-.02em
+  margin:0;font-family:var(--display);font-weight:300;
+  font-size:clamp(1.75rem,4.4vw,3.1rem);line-height:1.14;letter-spacing:-.03em;max-width:20ch
 }
-.op blockquote .q{color:var(--pemento)}
-.op cite{display:block;margin-top:1.25rem;font-style:normal;font-size:.8125rem;letter-spacing:.1em;text-transform:uppercase;color:var(--granito);font-weight:600}
-.op-grid{display:grid;gap:2.5rem}
-@media(min-width:880px){.op-grid{grid-template-columns:7fr 5fr;gap:4rem;align-items:end}}
-.op-small p{font-family:var(--display);font-size:1.0625rem;line-height:1.5;color:var(--lousa-2)}
-.op-small li{list-style:none;padding-bottom:1.35rem;margin-bottom:1.35rem;border-bottom:1px solid var(--fio)}
-.op-small li:last-child{border:0;padding:0;margin:0}
-.op-small ul{margin:0;padding:0}
-.op-small span{display:block;margin-top:.5rem;font-family:var(--sans);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--granito);font-weight:600}
+.op blockquote em{font-style:normal;color:var(--pemento)}
+.op .fuente{display:block;margin-top:1.5rem;font-size:.75rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granito);font-weight:600}
+.op-mas{list-style:none;margin:0;padding:0}
+.op-mas li + li{margin-top:1.5rem;padding-top:1.5rem;border-top:1px solid var(--fio)}
+.op-mas p{font-family:var(--display);font-size:1.0625rem;line-height:1.5;color:var(--lousa-2)}
+.op-mas span{display:block;margin-top:.55rem;font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granito);font-weight:600}
+.google{margin-top:clamp(2.5rem,5vw,3.5rem);padding-top:1.5rem;border-top:1px solid var(--fio);font-size:.9375rem;color:var(--granito)}
+.google b{color:var(--lousa);font-weight:600;font-variant-numeric:tabular-nums}
 
-/* ---------- visitar ---------- */
-.rotulo{display:block;width:100%;height:clamp(9rem,22vw,15rem);object-fit:cover;object-position:center 62%}
-.visit-grid{display:grid;gap:2.5rem}
-@media(min-width:960px){.visit-grid{grid-template-columns:5fr 6fr;gap:4rem;align-items:start}}
-.call{
-  display:flex;align-items:center;gap:.9rem;margin-top:1.5rem;
-  padding:1rem 1.35rem;border-radius:.7rem;background:var(--lousa);color:var(--cal)
-}
-.call svg{width:1.35rem;height:1.35rem;color:var(--mel);flex:none}
-.call small{display:block;font-size:.7rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mel);font-weight:600}
-.call b{font-family:var(--display);font-size:1.6rem;font-weight:500;letter-spacing:-.02em;font-variant-numeric:tabular-nums;line-height:1.15}
-.hours{margin:2rem 0 0;padding:1.35rem 1.5rem;background:var(--cal-3);border:1px solid var(--fio);border-radius:.7rem}
-.hours dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--granito);font-weight:600}
-.hours dd{margin:.5rem 0 0;font-family:var(--display);font-size:1.35rem;font-weight:500;letter-spacing:-.015em;font-variant-numeric:tabular-nums;line-height:1.35}
-.addr{margin-top:1.5rem}
-.addr dt{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--granito);font-weight:600}
-.addr dd{margin:.35rem 0 0;line-height:1.55}
-.map{overflow:hidden;border-radius:.7rem;border:1px solid var(--fio);background:var(--cal-2);min-height:24rem}
-.map iframe{display:block;width:100%;height:100%;min-height:24rem;border:0}
-.social{display:flex;flex-wrap:wrap;gap:1.5rem;margin-top:1.75rem;font-size:.9375rem;font-weight:500}
-.social a{color:var(--lousa-2);border-bottom:1px solid var(--fio);padding-bottom:.15rem;transition:color var(--dur-fast) var(--ease-out),border-color var(--dur-fast) var(--ease-out)}
-.social a:hover{color:var(--pemento);border-color:var(--pemento)}
+/* ---------- cómo llegar ---------- */
+.visitar{padding-block:clamp(4rem,9vw,8rem)}
+.visitar-grid{display:grid;gap:clamp(2.5rem,5vw,4rem)}
+@media(min-width:960px){.visitar-grid{grid-template-columns:5fr 6fr;gap:clamp(3rem,6vw,5rem);align-items:start}}
+.visitar h2{margin:.85rem 0 0}
+.datos{margin:2.5rem 0 0}
+.datos > div{display:grid;gap:.35rem;padding:1.1rem 0;border-top:1px solid var(--fio)}
+.datos > div:last-child{border-bottom:1px solid var(--fio)}
+.datos dt{font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:var(--granito);font-weight:600}
+.datos dd{margin:0;font-family:var(--display);font-size:1.25rem;line-height:1.4;font-variant-numeric:tabular-nums}
+.datos dd.tel a{border-bottom:1px solid var(--fio);padding-bottom:2px}
+.datos dd.tel a:hover{border-color:var(--pemento);color:var(--pemento)}
+.visitar-acc{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:2rem}
+.mapa{background:var(--cal-2);min-height:min(28rem,80vw);border:1px solid var(--fio)}
+.mapa iframe{display:block;width:100%;height:100%;min-height:min(28rem,80vw);border:0}
 
 /* ---------- pie ---------- */
-footer{background:var(--lousa);color:rgba(244,239,230,.62);padding-block:3rem;font-size:.9375rem}
-.foot-grid{display:flex;flex-direction:column;gap:1.75rem}
-@media(min-width:760px){.foot-grid{flex-direction:row;justify-content:space-between;align-items:flex-end;gap:3rem}}
-footer .name{font-family:var(--display);font-size:1.35rem;font-weight:500;letter-spacing:-.02em;color:var(--cal);margin:0 0 .4rem}
-footer a.tel{color:var(--mel);font-variant-numeric:tabular-nums}
-footer a.tel:hover{text-decoration:underline}
-footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,239,230,.56)}
+footer{background:var(--lousa);color:rgba(243,238,228,.72);padding-block:clamp(3rem,6vw,4.5rem);font-size:.9375rem}
+.pie{display:grid;gap:2.5rem}
+@media(min-width:760px){.pie{grid-template-columns:1.4fr 1fr 1fr;gap:3rem}}
+.pie h2{font-size:1.5rem;color:var(--cal);margin:0 0 .75rem}
+.pie dt{font-size:.6875rem;letter-spacing:.16em;text-transform:uppercase;color:rgba(243,238,228,.55);font-weight:600;margin-bottom:.4rem}
+.pie dd{margin:0 0 1.25rem;line-height:1.6}
+.pie a:hover{color:#fff}
+.pie .tel{color:var(--mel);font-variant-numeric:tabular-nums}
+.pie nav{display:grid;gap:.6rem}
+.pie nav a{color:rgba(243,238,228,.72)}
 
-/* ---------- movimiento ---------- */
-.rv{opacity:0;transform:translateY(18px);transition:opacity 520ms var(--ease-out),transform 520ms var(--ease-out)}
+/* ---------- movimiento: sólo apariciones ---------- */
+.rv{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}
 .rv.in{opacity:1;transform:none}
 @media(prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
@@ -275,6 +318,7 @@ footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,2
   "servesCuisine":["Gallega","Marisco","Española"],
   "priceRange":"10–25 €",
   "currenciesAccepted":"EUR",
+  "foundingDate":"2002",
   "address":{
     "@type":"PostalAddress",
     "streetAddress":"Rúa Pastor Díaz, 55 baixo",
@@ -298,22 +342,24 @@ footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,2
 <body>
 <a class="skip" href="#carta">Ir a la carta</a>
 
-<header>
+<header id="header">
   <div class="wrap bar">
-    <a class="brand" href="#top">Mesón O&nbsp;Recuncho</a>
+    <a class="brand" href="#top">O&nbsp;Recuncho</a>
     <nav class="desk">
       <a href="#carta">Carta</a>
       <a href="#local">El local</a>
       <a href="#opiniones">Opiniones</a>
       <a href="#visitar">Cómo llegar</a>
-      <a class="btn btn-fill btn-sm" href="tel:+34982563191">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-        982 563 191
-      </a>
     </nav>
-    <button class="burger" type="button" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
-    </button>
+    <div class="tools">
+      <a class="btn btn-ghost btn-sm tel-desk" href="tel:+34982563191">982 563 191</a>
+      <a class="icon-btn tel-icon" href="tel:+34982563191" aria-label="Llamar al 982 563 191">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+      <button class="icon-btn burger" type="button" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
   </div>
   <div class="drawer" id="drawer">
     <a href="#carta">Carta</a>
@@ -326,217 +372,219 @@ footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,2
 
 <main id="top">
 
-  <!-- ================= HERO ================= -->
+  <!-- ===================== HERO ===================== -->
   <section class="hero">
-    <div class="hero-grid">
-      <div class="hero-copy">
-        <p class="eyebrow">Rúa Pastor Díaz 55 · Viveiro · desde 2002</p>
-        <h1>Mesón O&nbsp;Recuncho</h1>
-        <p class="lede">Tapería gallega de marisco en el centro de Viveiro. Abierta todos los días, mediodía y noche.</p>
-        <p class="status" id="status" data-open="0">
-          <span class="dot"></span><span id="status-text">Consulta el horario</span>
-        </p>
-        <div class="cta-row">
-          <a class="btn btn-fill" href="tel:+34982563191">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            Llamar · 982 563 191
-          </a>
-          <a class="btn btn-line" href="#carta">Ver la carta</a>
-        </div>
-        <p class="rating">
-          <span class="stars" aria-hidden="true">★★★★★</span>
-          <span><b>4,5</b> en Google · más de <b>3.600</b> valoraciones</span>
-        </p>
+    <img class="hero-bg" src="img/local.jpg" width="1100" height="1243" fetchpriority="high" decoding="async"
+         alt="Comedor de O Recuncho: pared de piedra con un mural pintado de un faro entre olas, mesas de madera y sillas blancas envejecidas." />
+    <div class="hero-scrim"></div>
+    <div class="wrap hero-inner">
+      <h1>Mesón<br>O&nbsp;Recuncho</h1>
+      <p class="kicker">Tapería galega · Viveiro · desde 2002</p>
+      <div class="hero-actions">
+        <a class="btn btn-fill" href="#carta">Ver la carta</a>
+        <a class="btn btn-ghost" href="#visitar">Cómo llegar</a>
       </div>
-      <div class="hero-media">
-        <img src="img/local.jpg" width="1100" height="1243" fetchpriority="high" decoding="async"
-             alt="Comedor de O Recuncho: pared de piedra con un mural pintado de un faro entre olas, mesas de madera y sillas blancas envejecidas sobre suelo de pizarra." />
-      </div>
+      <p class="hero-meta">
+        <span class="estado" id="estado" data-open="0"><span class="punto"></span><span id="estado-txt">Todos los días</span></span>
+        <span class="sep">/</span>
+        <span><b>4,5</b> en Google, más de <b>3.600</b> valoraciones</span>
+      </p>
     </div>
   </section>
 
-  <!-- ================= INTRO ================= -->
-  <section class="pad" id="local">
-    <div class="wrap intro-grid">
-      <h2 class="rv">Veinticuatro años<br>en el mismo sitio</h2>
-      <div class="prose rv">
-        <p>O Recuncho abrió en 2002 en la Rúa Pastor Díaz y ahí sigue. Es un local pequeño, de unas siete mesas, dentro del centro comercial histórico de Viveiro — piedra vista, mesas de madera y un mural del faro pintado en la pared del fondo.</p>
-        <p>La carta es marisco y cocina gallega: pulpo, vieiras del Pacífico, luriñas, navajas, percebes, croquetas caseras y la ensalada de bonito del norte al natural. A eso se suman los arroces, los churrascos y el pescado a la brasa.</p>
-        <p class="muted">Abierto los siete días, de 13:00 a 17:00 y de 20:00 a 00:00.</p>
-      </div>
+  <!-- ===================== EL PULPO ===================== -->
+  <section class="polbo" id="polbo">
+    <div class="polbo-media">
+      <img src="img/polbo.jpg" width="1100" height="1218" loading="lazy" decoding="async"
+           alt="Pulpo con pimentón, aceite y sal gruesa sobre rodajas de patata, servido en plato de madera." />
+    </div>
+    <div class="polbo-copy">
+      <p class="kicker gold">La casa</p>
+      <h2>El polbo</h2>
+      <p class="polbo-say">Sobre patata cocida, con aceite, sal gruesa y pimentón, en plato de madera.</p>
+      <ul class="destacados">
+        <li>
+          <span class="nm"><span class="gl" lang="gl">Polbo á feira</span><span class="es">Pulpo al estilo feria</span></span>
+          <span class="pr">21,50 €</span>
+        </li>
+        <li>
+          <span class="nm"><span class="gl" lang="gl">Polbo á galega</span><span class="es">Pulpo a la gallega</span></span>
+          <span class="pr">18,00 €</span>
+        </li>
+        <li>
+          <span class="nm"><span class="gl" lang="gl">Ovos rotos con polbo</span><span class="es">Huevos rotos con pulpo</span></span>
+          <span class="pr">20,00 €</span>
+        </li>
+      </ul>
+      <a class="btn btn-ghost" href="#carta">Ver toda la carta</a>
     </div>
   </section>
 
-  <!-- ================= EL PULPO ================= -->
-  <section class="polbo">
-    <div class="polbo-grid">
-      <div class="polbo-media">
-        <img src="img/polbo.jpg" width="1100" height="1218" loading="lazy" decoding="async"
-             alt="Pulpo con pimentón, aceite y sal gruesa sobre rodajas de patata, servido en un plato de madera." />
-      </div>
-      <div class="polbo-copy">
-        <p class="eyebrow gold">La especialidad</p>
-        <h2>Polbo</h2>
-        <p class="note">Sobre patata cocida, con aceite, sal gruesa y pimentón, en plato de madera.</p>
-        <ul class="polbo-list">
-          <li>
-            <span class="n"><span class="gl" lang="gl">Polbo á feira</span><span class="es">Pulpo al estilo feria</span></span>
-            <span class="p">21,50 €</span>
-          </li>
-          <li>
-            <span class="n"><span class="gl" lang="gl">Polbo á galega</span><span class="es">Pulpo a la gallega</span></span>
-            <span class="p">18,00 €</span>
-          </li>
-          <li>
-            <span class="n"><span class="gl" lang="gl">Ovos rotos con polbo</span><span class="es">Huevos rotos con pulpo</span></span>
-            <span class="p">20,00 €</span>
-          </li>
-        </ul>
-        <p class="also">También en la carta: <b>arroz con pulpo y zamburiñas</b> (23,00 €) y <b>tosta de pulpo con queso San Simón</b> (15,00 €).</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ================= CARTA ================= -->
-  <section class="carta pad" id="carta">
+  <!-- ===================== DESDE 2002 ===================== -->
+  <section class="desde" id="local">
     <div class="wrap">
-      <div class="carta-head rv">
-        <p class="eyebrow quiet">Carta</p>
-        <h2>Lo que hay</h2>
+      <div class="desde-grid">
+        <div class="rv">
+          <p class="anno"><span>El local</span>2002</p>
+        </div>
+        <div class="rv">
+          <p class="say">O Recuncho abrió en 2002 en la Rúa Pastor Díaz y no se ha movido de ahí. Siete mesas, piedra vista y un faro pintado en la pared del fondo.</p>
+          <p class="say">Se come marisco: pulpo, vieiras, luriñas, navajas, percebes. Y lo que sale de la brasa y de la cazuela — churrascos, arroces, croquetas caseras.</p>
+        </div>
       </div>
+      <figure class="desde-foto rv">
+        <img src="img/rotulo.jpg" width="1067" height="378" loading="lazy" decoding="async"
+             alt="Fachada de piedra de O Recuncho en la Rúa Pastor Díaz, con el rótulo del mesón en letras metálicas." />
+        <figcaption>Rúa Pastor Díaz, 55 — centro histórico de Viveiro</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <div class="onda" aria-hidden="true"></div>
+
+  <!-- ===================== CARTA ===================== -->
+  <section class="carta" id="carta">
+    <div class="wrap">
+      <div class="carta-top rv">
+        <p class="kicker warm">Carta</p>
+        <h2>Lo que hay hoy</h2>
+      </div>
+
+      <ul class="indice">
+        <li><a href="#g-racions">Racións</a></li>
+        <li><a href="#g-entrantes">Entrantes</a></li>
+        <li><a href="#g-arroces">Arroces</a></li>
+        <li><a href="#g-carnes">Carnes</a></li>
+        <li><a href="#g-pescados">Pescados y mariscos</a></li>
+        <li><a href="#g-postres">Postres</a></li>
+      </ul>
 
       <!-- Racións -->
-      <div class="block rv">
-        <div class="block-head">
-          <h3 lang="gl">Racións</h3><span class="alt">Raciones</span>
-        </div>
-        <ul class="items two">
-          <li><span class="n"><span class="gl" lang="gl">Ameixas á prancha</span><span class="es">Almejas a la plancha</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Pementos de Padrón</span><span class="es">Pimientos de Padrón</span></span><span class="p">7,00 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Berberechos á prancha</span><span class="es">Berberechos a la plancha</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Luriñas fritas</span><span class="es">Chipirones fritos</span></span><span class="p">12,00 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Navallas á prancha</span><span class="es">Navajas a la plancha</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Luriñas á prancha</span><span class="es">Chipirones a la plancha</span></span><span class="p">13,00 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Percebes</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Luras fritas</span><span class="es">Calamares fritos</span></span><span class="p">15,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Vieiras do Pacífico</span><span class="es">Vieiras del Pacífico</span></span><span class="p">14,00 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Raxo</span><span class="es">Cinta de lomo de cerdo</span></span><span class="p">12,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Paté de merluza</span></span><span class="p">6,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Lacón asado</span></span><span class="p">11,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Ensalada normal</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Espetada moura con patacas</span><span class="es">Pincho moruno con patatas</span></span><span class="p">9,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Ensalada de bonito do norte ao natural</span><span class="es">Ensalada de bonito del norte al natural</span></span><span class="p">17,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Pan de forno de leña</span><span class="es">Pan de horno de leña</span></span><span class="p">1,10 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Croquetas caseiras</span><span class="es">Croquetas caseras</span></span><span class="p">9,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Polbo á feira</span><span class="es">Pulpo al estilo feria</span></span><span class="p">21,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Polbo á galega</span><span class="es">Pulpo a la gallega</span></span><span class="p">18,00 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Ovos rotos con polbo</span><span class="es">Huevos rotos con pulpo</span></span><span class="p">20,00 €</span></li>
+      <div class="grupo" id="g-racions">
+        <div class="grupo-top"><h3 lang="gl">Racións</h3><span class="alt">Raciones</span></div>
+        <p class="remite">El polbo, <a href="#polbo">en la especialidad de la casa</a>.</p>
+        <ul class="platos dos">
+          <li><span class="nm"><span class="gl" lang="gl">Ameixas á prancha</span><span class="es">Almejas a la plancha</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Berberechos á prancha</span><span class="es">Berberechos a la plancha</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Navallas á prancha</span><span class="es">Navajas a la plancha</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Percebes</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Ensalada normal</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Pan de forno de leña</span><span class="es">Pan de horno de leña</span></span><span class="pr">1,10 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Paté de merluza</span></span><span class="pr">6,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Pementos de Padrón</span><span class="es">Pimientos de Padrón</span></span><span class="pr">7,00 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Espetada moura con patacas</span><span class="es">Pincho moruno con patatas</span></span><span class="pr">9,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Croquetas caseiras</span><span class="es">Croquetas caseras</span></span><span class="pr">9,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Lacón asado</span></span><span class="pr">11,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Luriñas fritas</span><span class="es">Chipirones fritos</span></span><span class="pr">12,00 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Raxo</span><span class="es">Cinta de lomo de cerdo</span></span><span class="pr">12,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Luriñas á prancha</span><span class="es">Chipirones a la plancha</span></span><span class="pr">13,00 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Vieiras do Pacífico</span><span class="es">Vieiras del Pacífico</span></span><span class="pr">14,00 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Luras fritas</span><span class="es">Calamares fritos</span></span><span class="pr">15,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Ensalada de bonito do norte ao natural</span><span class="es">Ensalada de bonito del norte al natural</span></span><span class="pr">17,50 €</span></li>
         </ul>
+      </div>
+
+      <div class="pareja rv">
+        <figure class="alta">
+          <img src="img/vieiras.jpg" width="800" height="800" loading="lazy" decoding="async"
+               alt="Vieiras a la plancha servidas en sus conchas sobre un plato rojo, con salsa verde y aceite." />
+          <figcaption>Vieiras do Pacífico</figcaption>
+        </figure>
+        <figure class="baja">
+          <img src="img/mesa.jpg" width="900" height="1027" loading="lazy" decoding="async"
+               alt="Mesa del mesón con un plato de san jacobo, patatas fritas y ensalada, y una ración de pulpo al fondo." />
+          <figcaption>Mesa puesta</figcaption>
+        </figure>
       </div>
 
       <!-- Entrantes -->
-      <div class="block rv">
-        <div class="block-head"><h3>Entrantes</h3></div>
-        <ul class="items two">
-          <li><span class="n"><span class="gl">Ensalada mixta</span></span><span class="p">10,00 €</span></li>
-          <li><span class="n"><span class="gl">Tomate rosa aliñado</span></span><span class="p">10,00 €</span></li>
-          <li><span class="n"><span class="gl">Tomate Mar Azul con burrata</span></span><span class="p">12,00 €</span></li>
-          <li><span class="n"><span class="gl">Tomate con puerro confitado</span></span><span class="p">12,00 €</span></li>
-          <li><span class="n"><span class="gl">Ensaladilla rusa</span></span><span class="p">12,00 €</span></li>
-          <li><span class="n"><span class="gl">Alcachofas confitadas</span></span><span class="p">12,00 €</span></li>
-          <li><span class="n"><span class="gl">Croquetas de chipirones</span></span><span class="p">14,00 €</span></li>
-          <li><span class="n"><span class="gl">Croquetas de jamón ibérico</span></span><span class="p">12,00 €</span></li>
-          <li><span class="n"><span class="gl">Torrezno de Soria</span></span><span class="p">14,00 €</span></li>
-          <li><span class="n"><span class="gl">Morcilla Magnum</span></span><span class="p">15,00 €</span></li>
-          <li><span class="n"><span class="gl">Tosta de pulpo con queso San Simón</span></span><span class="p">15,00 €</span></li>
-          <li><span class="n"><span class="gl">Anchoas Cantábrico</span></span><span class="p">25,00 €</span></li>
-          <li><span class="n"><span class="gl">Cecina wagyu</span></span><span class="p">25,00 €</span></li>
+      <div class="grupo" id="g-entrantes">
+        <div class="grupo-top"><h3>Entrantes</h3></div>
+        <ul class="platos dos">
+          <li><span class="nm"><span class="gl">Ensalada mixta</span></span><span class="pr">10,00 €</span></li>
+          <li><span class="nm"><span class="gl">Tomate rosa aliñado</span></span><span class="pr">10,00 €</span></li>
+          <li><span class="nm"><span class="gl">Tomate Mar Azul con burrata</span></span><span class="pr">12,00 €</span></li>
+          <li><span class="nm"><span class="gl">Tomate con puerro confitado</span></span><span class="pr">12,00 €</span></li>
+          <li><span class="nm"><span class="gl">Ensaladilla rusa</span></span><span class="pr">12,00 €</span></li>
+          <li><span class="nm"><span class="gl">Alcachofas confitadas</span></span><span class="pr">12,00 €</span></li>
+          <li><span class="nm"><span class="gl">Croquetas de jamón ibérico</span></span><span class="pr">12,00 €</span></li>
+          <li><span class="nm"><span class="gl">Croquetas de chipirones</span></span><span class="pr">14,00 €</span></li>
+          <li><span class="nm"><span class="gl">Torrezno de Soria</span></span><span class="pr">14,00 €</span></li>
+          <li><span class="nm"><span class="gl">Morcilla Magnum</span></span><span class="pr">15,00 €</span></li>
+          <li><span class="nm"><span class="gl">Tosta de pulpo con queso San Simón</span></span><span class="pr">15,00 €</span></li>
+          <li><span class="nm"><span class="gl">Anchoas Cantábrico</span></span><span class="pr">25,00 €</span></li>
+          <li><span class="nm"><span class="gl">Cecina wagyu</span></span><span class="pr">25,00 €</span></li>
         </ul>
       </div>
 
-      <!-- Arroces + Carnes -->
-      <div class="pair">
-        <div class="block rv">
-          <div class="block-head"><h3>Arroces</h3></div>
-          <ul class="items">
-            <li><span class="n"><span class="gl">Arroz con secreto ibérico</span></span><span class="p">20,00 €</span></li>
-            <li><span class="n"><span class="gl">Arroz con pulpo y zamburiñas</span></span><span class="p">23,00 €</span></li>
-            <li><span class="n"><span class="gl">Arroz de senyoret</span></span><span class="p">23,00 €</span></li>
-            <li><span class="n"><span class="gl">Arroz con mejillón y langostino</span></span><span class="p">22,00 €</span></li>
-            <li><span class="n"><span class="gl">Arroz caldoso con bogavante</span></span><span class="p">26,00 €</span></li>
+      <div class="par">
+        <!-- Arroces -->
+        <div class="grupo" id="g-arroces">
+          <div class="grupo-top"><h3>Arroces</h3></div>
+          <ul class="platos">
+            <li><span class="nm"><span class="gl">Arroz con secreto ibérico</span></span><span class="pr">20,00 €</span></li>
+            <li><span class="nm"><span class="gl">Arroz con mejillón y langostino</span></span><span class="pr">22,00 €</span></li>
+            <li><span class="nm"><span class="gl">Arroz con pulpo y zamburiñas</span></span><span class="pr">23,00 €</span></li>
+            <li><span class="nm"><span class="gl">Arroz de senyoret</span></span><span class="pr">23,00 €</span></li>
+            <li><span class="nm"><span class="gl">Arroz caldoso con bogavante</span></span><span class="pr">26,00 €</span></li>
           </ul>
         </div>
-        <div class="block rv">
-          <div class="block-head"><h3>Carnes</h3></div>
-          <ul class="items">
-            <li><span class="n"><span class="gl">Lágrima ibérica</span></span><span class="p">25,00 €</span></li>
-            <li><span class="n"><span class="gl">Churrasco de cerdo</span></span><span class="p">18,00 €</span></li>
-            <li><span class="n"><span class="gl">Churrasco de ternera</span></span><span class="p">18,00 €</span></li>
-            <li><span class="n"><span class="gl">Entrecot</span></span><span class="p">25,00 €</span></li>
-            <li><span class="n"><span class="gl">Tabla de carnes variadas</span><span class="es">Ensalada, criollo, chorizo y patatas</span></span><span class="p">55,00 €</span></li>
-            <li><span class="n"><span class="gl">Chorizo rojo o criollo</span></span><span class="p">3,00 €</span></li>
-            <li><span class="n"><span class="gl">Patatas fritas</span></span><span class="p">3,50 €</span></li>
+        <!-- Carnes -->
+        <div class="grupo" id="g-carnes">
+          <div class="grupo-top"><h3>Carnes</h3></div>
+          <ul class="platos">
+            <li><span class="nm"><span class="gl">Chorizo rojo o criollo</span></span><span class="pr">3,00 €</span></li>
+            <li><span class="nm"><span class="gl">Patatas fritas</span></span><span class="pr">3,50 €</span></li>
+            <li><span class="nm"><span class="gl">Churrasco de cerdo</span></span><span class="pr">18,00 €</span></li>
+            <li><span class="nm"><span class="gl">Churrasco de ternera</span></span><span class="pr">18,00 €</span></li>
+            <li><span class="nm"><span class="gl">Entrecot</span></span><span class="pr">25,00 €</span></li>
+            <li><span class="nm"><span class="gl">Lágrima ibérica</span></span><span class="pr">25,00 €</span></li>
+            <li><span class="nm"><span class="gl">Tabla de carnes variadas</span><span class="es">Ensalada, criollo, chorizo y patatas</span></span><span class="pr">55,00 €</span></li>
           </ul>
         </div>
       </div>
 
       <!-- Pescados y mariscos -->
-      <div class="block rv">
-        <div class="block-head"><h3>Pescados y mariscos</h3></div>
-        <ul class="items two">
-          <li><span class="n"><span class="gl">Almejas a la plancha</span></span></li>
-          <li><span class="n"><span class="gl">Navajas a la plancha</span></span></li>
-          <li><span class="n"><span class="gl">Bacalao a la brasa</span></span><span class="p">25,00 €</span></li>
-          <li><span class="n"><span class="gl">Pez espada a la brasa</span></span><span class="p">20,00 €</span></li>
+      <div class="grupo" id="g-pescados">
+        <div class="grupo-top"><h3>Pescados y mariscos</h3></div>
+        <ul class="platos dos">
+          <li><span class="nm"><span class="gl">Almejas a la plancha</span></span></li>
+          <li><span class="nm"><span class="gl">Navajas a la plancha</span></span></li>
+          <li><span class="nm"><span class="gl">Pez espada a la brasa</span></span><span class="pr">20,00 €</span></li>
+          <li><span class="nm"><span class="gl">Bacalao a la brasa</span></span><span class="pr">25,00 €</span></li>
         </ul>
       </div>
 
-      <!-- Sobremesa -->
-      <div class="block rv">
-        <div class="block-head">
-          <h3 lang="gl">Sobremesa</h3><span class="alt">Postres</span>
-        </div>
-        <ul class="items two">
-          <li><span class="n"><span class="gl" lang="gl">Requeixo</span><span class="es">Requesón</span></span><span class="p">4,50 €<span class="x">+0,50 € con miel</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Torta de queixo</span><span class="es">Tarta de queso</span></span><span class="p">4,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Torta de noz</span><span class="es">Tarta de nuez</span></span><span class="p">5,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Torta da avoa</span><span class="es">Tarta de la abuela</span></span><span class="p">5,50 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Flan café</span></span><span class="p">4,50 €<span class="x">+0,50 € con nata</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Flan de ovo</span><span class="es">Flan de huevo</span></span><span class="p">4,00 €<span class="x">+0,50 € con nata</span></span></li>
-          <li><span class="n"><span class="gl" lang="gl">Arroz con leite</span><span class="es">Arroz con leche</span></span><span class="p">5,00 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Tarta de tres chocolates</span></span><span class="p">5,00 €</span></li>
-          <li><span class="n"><span class="gl" lang="gl">Queixo San Simón da Costa</span><span class="es">Queso San Simón da Costa</span></span><span class="p">8,50 €<span class="x">+2,50 € con membrillo</span></span></li>
+      <!-- Postres -->
+      <div class="grupo" id="g-postres">
+        <div class="grupo-top"><h3 lang="gl">Sobremesa</h3><span class="alt">Postres</span></div>
+        <ul class="platos dos">
+          <li><span class="nm"><span class="gl" lang="gl">Flan de ovo</span><span class="es">Flan de huevo</span></span><span class="pr">4,00 €<span class="mas">+0,50 € con nata</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Requeixo</span><span class="es">Requesón</span></span><span class="pr">4,50 €<span class="mas">+0,50 € con miel</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Torta de queixo</span><span class="es">Tarta de queso</span></span><span class="pr">4,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Flan café</span></span><span class="pr">4,50 €<span class="mas">+0,50 € con nata</span></span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Arroz con leite</span><span class="es">Arroz con leche</span></span><span class="pr">5,00 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Tarta de tres chocolates</span></span><span class="pr">5,00 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Torta de noz</span><span class="es">Tarta de nuez</span></span><span class="pr">5,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Torta da avoa</span><span class="es">Tarta de la abuela</span></span><span class="pr">5,50 €</span></li>
+          <li><span class="nm"><span class="gl" lang="gl">Queixo San Simón da Costa</span><span class="es">Queso San Simón da Costa</span></span><span class="pr">8,50 €<span class="mas">+2,50 € con membrillo</span></span></li>
         </ul>
       </div>
 
-      <p class="carta-foot muted">Carta actual del mesón. Algunos platos no llevan precio indicado en la carta. Si tienes alguna alergia o intolerancia, dilo al pedir.</p>
+      <p class="alergenos">Si tienes alguna alergia o intolerancia, dilo al pedir.</p>
     </div>
   </section>
 
-  <!-- ================= GALERÍA ================= -->
-  <section class="gal">
-    <figure>
-      <img src="img/vieiras.jpg" width="800" height="800" loading="lazy" decoding="async"
-           alt="Vieiras a la plancha servidas en sus conchas sobre un plato rojo, con salsa verde y aceite." />
-      <figcaption>Vieiras do Pacífico</figcaption>
-    </figure>
-    <figure>
-      <img src="img/mesa.jpg" width="900" height="1027" loading="lazy" decoding="async"
-           alt="Mesa del mesón con un plato de san jacobo, patatas fritas y ensalada, y una ración de pulpo al fondo." />
-      <figcaption>Mesa puesta, con el pulpo al fondo</figcaption>
-    </figure>
-  </section>
-
-  <!-- ================= OPINIONES ================= -->
-  <section class="op pad" id="opiniones">
+  <!-- ===================== OPINIONES ===================== -->
+  <section class="op" id="opiniones">
     <div class="wrap op-grid">
       <div class="rv">
-        <p class="eyebrow quiet">Opiniones</p>
-        <blockquote><span class="q">“</span>El pulpo a la gallega y a la plancha, insuperables, así como las patatas, buenísimas<span class="q">”</span></blockquote>
-        <cite>Tripadvisor</cite>
+        <p class="kicker warm">Opiniones</p>
+        <blockquote><em>“</em>El pulpo a la gallega y a la plancha, insuperables, así como las patatas, buenísimas<em>”</em></blockquote>
+        <span class="fuente">Tripadvisor</span>
       </div>
-      <div class="op-small rv">
-        <ul>
+      <div class="rv">
+        <ul class="op-mas">
           <li>
             <p>“Las raciones son grandes, el pulpo buenísimo, las navajas muy ricas y frescas.”</p>
             <span>Tripadvisor</span>
@@ -546,48 +594,38 @@ footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,2
             <span>Tripadvisor</span>
           </li>
         </ul>
+        <p class="google"><b>4,5</b> sobre 5 en Google, con más de <b>3.600</b> valoraciones.</p>
       </div>
     </div>
   </section>
 
-  <!-- ================= VISITAR ================= -->
-  <img class="rotulo" src="img/rotulo.jpg" width="1067" height="378" loading="lazy" decoding="async"
-       alt="Fachada de piedra de O Recuncho en la Rúa Pastor Díaz, con el rótulo del mesón en letras metálicas." />
-
-  <section class="pad" id="visitar">
-    <div class="wrap visit-grid">
-      <div>
-        <p class="eyebrow quiet">Cómo llegar</p>
-        <h2>Rúa Pastor Díaz&nbsp;55</h2>
-
-        <a class="call" href="tel:+34982563191">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          <span><small>Llamar al mesón</small><b>982 563 191</b></span>
-        </a>
-
-        <dl class="hours">
-          <dt>Horario · todos los días</dt>
-          <dd>13:00 – 17:00<br>20:00 – 00:00</dd>
+  <!-- ===================== CÓMO LLEGAR ===================== -->
+  <section class="visitar" id="visitar">
+    <div class="wrap visitar-grid">
+      <div class="rv">
+        <p class="kicker warm">Cómo llegar</p>
+        <h2>Rúa Pastor Díaz,&nbsp;55</h2>
+        <dl class="datos">
+          <div>
+            <dt>Dirección</dt>
+            <dd>Rúa Pastor Díaz, 55 baixo<br>27850 Viveiro (Lugo)</dd>
+          </div>
+          <div>
+            <dt>Teléfono</dt>
+            <dd class="tel"><a href="tel:+34982563191">982 563 191</a></dd>
+          </div>
+          <div>
+            <dt>Horario · todos los días</dt>
+            <dd>13:00 – 17:00 &nbsp;/&nbsp; 20:00 – 00:00</dd>
+          </div>
         </dl>
-
-        <dl class="addr">
-          <dt>Dirección</dt>
-          <dd>Rúa Pastor Díaz, 55 baixo<br>27850 Viveiro (Lugo)</dd>
-        </dl>
-
-        <div class="cta-row">
-          <a class="btn btn-fill" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mes%C3%B3n%20O%20Recuncho%2C%20R%C3%BAa%20Pastor%20D%C3%ADaz%2055%2C%2027850%20Viveiro%2C%20Lugo">Cómo llegar</a>
-          <a class="btn btn-line" href="https://www.google.com/maps/search/?api=1&amp;query=Mes%C3%B3n%20O%20Recuncho%2C%20R%C3%BAa%20Pastor%20D%C3%ADaz%2055%2C%2027850%20Viveiro%2C%20Lugo">Ver en Google Maps</a>
-        </div>
-
-        <div class="social">
-          <a href="https://www.instagram.com/mesonorecuncho/" rel="noopener">Instagram</a>
-          <a href="https://www.facebook.com/recuncho.viveiro/" rel="noopener">Facebook</a>
+        <div class="visitar-acc">
+          <a class="btn btn-line" href="tel:+34982563191">Llamar</a>
+          <a class="btn btn-fill" href="https://www.google.com/maps/dir/?api=1&amp;destination=Mes%C3%B3n%20O%20Recuncho%2C%20R%C3%BAa%20Pastor%20D%C3%ADaz%2055%2C%2027850%20Viveiro%2C%20Lugo" rel="noopener">Cómo llegar</a>
         </div>
       </div>
-
-      <div class="map">
-        <iframe title="Mapa de Mesón O Recuncho en la Rúa Pastor Díaz de Viveiro"
+      <div class="mapa rv">
+        <iframe title="Mapa de la Rúa Pastor Díaz 55, Viveiro"
                 src="https://www.google.com/maps?q=R%C3%BAa%20Pastor%20D%C3%ADaz%2055%2C%2027850%20Viveiro%2C%20Lugo&amp;output=embed"
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
       </div>
@@ -596,13 +634,30 @@ footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,2
 </main>
 
 <footer>
-  <div class="wrap foot-grid">
+  <div class="wrap pie">
     <div>
-      <p class="name">Mesón O Recuncho</p>
-      <p>Tapería gallega de marisco · Viveiro, Lugo</p>
-      <p><a class="tel" href="tel:+34982563191">982 563 191</a></p>
+      <h2>Mesón O Recuncho</h2>
+      <p>Tapería gallega de marisco<br>Viveiro, Lugo</p>
     </div>
-    <p class="small">Carta y precios según la carta actual del mesón; pregunta en el local si algo ha cambiado. Valoración de Google a agosto de 2026.</p>
+    <dl>
+      <dt>Dónde</dt>
+      <dd>Rúa Pastor Díaz, 55 baixo<br>27850 Viveiro (Lugo)<br>
+        <a href="https://www.google.com/maps/dir/?api=1&amp;destination=Mes%C3%B3n%20O%20Recuncho%2C%20R%C3%BAa%20Pastor%20D%C3%ADaz%2055%2C%2027850%20Viveiro%2C%20Lugo" rel="noopener">Cómo llegar</a>
+      </dd>
+      <dt>Teléfono</dt>
+      <dd><a class="tel" href="tel:+34982563191">982 563 191</a></dd>
+    </dl>
+    <dl>
+      <dt>Horario</dt>
+      <dd>Todos los días<br>13:00 – 17:00<br>20:00 – 00:00</dd>
+      <dt>Secciones</dt>
+      <dd><nav>
+        <a href="#carta">Carta</a>
+        <a href="#local">El local</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#visitar">Cómo llegar</a>
+      </nav></dd>
+    </dl>
   </div>
 </footer>
 
@@ -613,31 +668,47 @@ footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,2
   /* --- menú móvil --- */
   var burger = document.getElementById("burger");
   var drawer = document.getElementById("drawer");
-  function closeDrawer(){
+  var header = document.getElementById("header");
+
+  function cerrar(){
     drawer.classList.remove("open");
     burger.setAttribute("aria-expanded","false");
     burger.setAttribute("aria-label","Abrir menú");
   }
   burger.addEventListener("click", function(){
-    var open = drawer.classList.toggle("open");
-    burger.setAttribute("aria-expanded", open ? "true" : "false");
-    burger.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+    var abierto = drawer.classList.toggle("open");
+    burger.setAttribute("aria-expanded", abierto ? "true" : "false");
+    burger.setAttribute("aria-label", abierto ? "Cerrar menú" : "Abrir menú");
+    if(abierto) header.classList.add("solid");
+    else pintaHeader();
   });
-  drawer.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", closeDrawer); });
-  document.addEventListener("keydown", function(e){ if(e.key === "Escape") closeDrawer(); });
+  drawer.querySelectorAll("a").forEach(function(a){ a.addEventListener("click", cerrar); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") cerrar(); });
+
+  /* --- la cabecera se vuelve sólida al salir del hero --- */
+  function pintaHeader(){
+    if(drawer.classList.contains("open")) return;
+    header.classList.toggle("solid", window.scrollY > 40);
+  }
+  pintaHeader();
+  window.addEventListener("scroll", pintaHeader, { passive:true });
 
   /* --- abierto / cerrado, en hora local del mesón --- */
-  // Todos los días: 13:00–17:00 y 20:00–00:00
+  /* Todos los días: 13:00–17:00 y 20:00–00:00 */
   var TRAMOS = [[13*60, 17*60], [20*60, 24*60]];
-  function ahoraEnViveiro(){
+  function hhmm(m){
+    m = m % (24*60);
+    return String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0");
+  }
+  function ahora(){
     try{
-      var p = new Intl.DateTimeFormat("es-ES",{
+      var partes = new Intl.DateTimeFormat("es-ES",{
         timeZone:"Europe/Madrid", hour:"2-digit", minute:"2-digit", hour12:false
       }).formatToParts(new Date());
       var h = 0, m = 0;
-      p.forEach(function(x){
-        if(x.type === "hour")   h = parseInt(x.value,10) % 24;
-        if(x.type === "minute") m = parseInt(x.value,10);
+      partes.forEach(function(p){
+        if(p.type === "hour")   h = parseInt(p.value,10) % 24;
+        if(p.type === "minute") m = parseInt(p.value,10);
       });
       return h*60 + m;
     }catch(e){
@@ -645,47 +716,37 @@ footer .small{max-width:34ch;font-size:.8125rem;line-height:1.6;color:rgba(244,2
       return d.getHours()*60 + d.getMinutes();
     }
   }
-  function hhmm(min){
-    var m = min % (24*60);
-    return String(Math.floor(m/60)).padStart(2,"0") + ":" + String(m%60).padStart(2,"0");
-  }
-  var el = document.getElementById("status");
-  var txt = document.getElementById("status-text");
+  var caja = document.getElementById("estado");
+  var txt  = document.getElementById("estado-txt");
   function pintaEstado(){
-    var t = ahoraEnViveiro(), i, abierto = null, proxima = TRAMOS[0][0];
-    for(i = 0; i < TRAMOS.length; i++){
+    var t = ahora(), abierto = null, proxima = TRAMOS[0][0];
+    for(var i = 0; i < TRAMOS.length; i++){
       if(t >= TRAMOS[i][0] && t < TRAMOS[i][1]){ abierto = TRAMOS[i]; break; }
       if(t < TRAMOS[i][0]){ proxima = TRAMOS[i][0]; break; }
     }
-    el.setAttribute("data-open", abierto ? "1" : "0");
+    caja.setAttribute("data-open", abierto ? "1" : "0");
     txt.textContent = abierto
-      ? "Abierto ahora"
-      : "Cerrado ahora";
-    var det = document.createElement("span");
-    det.className = "det";
-    det.textContent = abierto
-      ? " · cierra a las " + hhmm(abierto[1])
-      : " · abre a las "   + hhmm(proxima);
-    txt.appendChild(det);
+      ? "Abierto, cierra a las " + hhmm(abierto[1])
+      : "Cerrado, abre a las "   + hhmm(proxima);
   }
   pintaEstado();
   setInterval(pintaEstado, 60000);
 
-  /* --- reveals --- */
-  var rv = document.querySelectorAll(".rv");
+  /* --- apariciones al hacer scroll --- */
+  var piezas = document.querySelectorAll(".rv");
   if(!("IntersectionObserver" in window) ||
      window.matchMedia("(prefers-reduced-motion: reduce)").matches){
-    rv.forEach(function(n){ n.classList.add("in"); });
+    piezas.forEach(function(n){ n.classList.add("in"); });
   }else{
-    var io = new IntersectionObserver(function(entries){
-      entries.forEach(function(en, i){
+    var io = new IntersectionObserver(function(entradas){
+      entradas.forEach(function(en, i){
         if(!en.isIntersecting) return;
         var n = en.target;
-        setTimeout(function(){ n.classList.add("in"); }, (i % 4) * 70);
+        setTimeout(function(){ n.classList.add("in"); }, (i % 3) * 80);
         io.unobserve(n);
       });
-    }, { rootMargin: "0px 0px -12% 0px", threshold: 0.1 });
-    rv.forEach(function(n){ io.observe(n); });
+    }, { rootMargin:"0px 0px -10% 0px", threshold:0.08 });
+    piezas.forEach(function(n){ io.observe(n); });
   }
 })();
 </script>
